@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // Modern JavaScript özelliklerini hedefler
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Kullanılacak kütüphane tanımları
+    "allowJs": false, // JavaScript dosyalarına izin verme (isteğe bağlı)
+    "skipLibCheck": true, // Kütüphane dosyalarının tip kontrolünü atla
+    "esModuleInterop": true, // CommonJS modülleriyle daha iyi uyumluluk sağlar
+    "allowSyntheticDefaultImports": true, // default import'lara izin ver
+    "strict": true, // Tüm katı tip kontrolü seçeneklerini etkinleştir
+    "forceConsistentCasingInFileNames": true, // Dosya adlarında büyük/küçük harf tutarlılığını zorla
+    "module": "ESNext", // Modül sistemi
+    "moduleResolution": "bundler", // Vite için önerilen modül çözümleme stratejisi (veya "node")
+    "resolveJsonModule": true, // JSON dosyalarını import etmeye izin ver
+    "isolatedModules": true, // Her dosyanın ayrı bir modül olarak derlenmesini sağlar
+    "noEmit": true, // TypeScript derleyicisinin JavaScript dosyası üretmesini engeller (Vite bunu yapar)
+    "jsx": "react-jsx", // JSX'in nasıl işleneceği (React 17+ için)
+    // Projenizin yapısına göre baseUrl ve paths ayarlarını ekleyebilirsiniz
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@/*": ["./src/*"] // Örn: @/components/* gibi importlar için
+    // }
+  },
+  "include": ["src"] // TypeScript'in hangi dosyaları derleyeceğini belirtir (genellikle src klasörü)
+  // "references" satırı, tsconfig.node.json dosyası bulunmadığı için kaldırıldı.
+  // Eğer vite.config.ts gibi Node ortamında çalışan dosyalarınız için ayrı tip kontrolü
+  // gerekirse, tsconfig.node.json dosyasını oluşturup "references" satırını geri ekleyebilirsiniz.
+}
